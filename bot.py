@@ -119,7 +119,7 @@ while True:
 			t = time.localtime()
 			current_time = time.strftime("%I:%M %p", t)
 			current_minute = time.strftime("%M", t)
-
+			current_hour = time.strftime("%I", t)
 			timecheck = 0
 	except:
 			try: 
