@@ -50,10 +50,10 @@ while True:
 			tn.write(converToByte + b'\n\n')
 			last_hour = current_hour
 
-		#if ("led by CpuMatt" in str(whathappen)):
-		#	converTeeHee = str(random.choice(teeheematt))
-		#	convertedTeeHee = bytes(converTeeHee, 'utf-8')
-		#	tn.write(convertedTeeHee + b'\n\n')
+		if ("led by CpuMatt" in str(whathappen)):
+			converTeeHee = str(random.choice(teeheematt))
+			convertedTeeHee = bytes(converTeeHee, 'utf-8')
+			tn.write(convertedTeeHee + b'\n\n')
 
 		if ("!rainonme" in str(whathappen)):
 			tn.write(b"weather rain 1\n\n")
@@ -106,7 +106,7 @@ while True:
 		elif ((int(current_hour) != 2) & (int(current_minute) != 28)):
 			messageOnce2minRestartAlert = True
 
-		if ((int(current_hour)/3).is_integer()) & messageOnceRestartNotify == True:
+		if (int(current_minute) == 45) & ((int(current_hour)/3).is_integer()) & messageOnceRestartNotify == True:
 			tn.write(b'say "Server restarts at 2:30AM & PM."\n\n')
 			messageOnceRestartNotify = False
 		elif (int(current_minute) != 45):
