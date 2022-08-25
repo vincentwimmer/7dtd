@@ -30,7 +30,6 @@ messageOnce5minRestartAlert = True
 messageOnce2minRestartAlert = True
 messageOnceRestartNotify = True
 
-
 # Init Time
 t = time.localtime()
 current_time = time.strftime("%I:%M %p", t)
@@ -107,7 +106,7 @@ while True:
 		elif ((int(current_hour) != 2) & (int(current_minute) != 28)):
 			messageOnce2minRestartAlert = True
 
-		if (int(current_minute) == 45) & messageOnceRestartNotify == True:
+		if ((int(current_hour)/3).is_integer()) & messageOnceRestartNotify == True:
 			tn.write(b'say "Server restarts at 2:30AM & PM."\n\n')
 			messageOnceRestartNotify = False
 		elif (int(current_minute) != 45):
