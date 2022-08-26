@@ -21,7 +21,26 @@ teeheematt = ['say "Matt you are doing it!"',
 'say "Matt you are so brave!"',
 'say "Matt you must keep killing to save the queen"',
 'say "Oi Matt you almost spilled your tea!"',
-'say "Matt is a killing machine!"']
+'say "Matt is a killing machine!"',
+'say "Matt is really putting the hurt on these bitches!"',
+'say "GO MATT GO!"',
+'say "MATTS GONNA TAKE ZOMBIES DOWN TO ZERO!"',
+'say "Matt can not be stopped!"',
+'say "Matt you are a champion!"',
+'say "The honeys are soaked Matt!"',
+'say "Matt is punishing them!"',
+'say "CREAM THEM MATT!"',
+'say "Matt is the ULTIMATE PREDATOR!"',
+'say "MATT MATT MATT!"',
+'say "MATT KILL MATT KILL MATT KILL!"',
+'say "FUCK THEM UP MATT!"',
+'say "RAIN FIRE ON THEM HOES MATT!"',
+'say "One Zombie Two Zombie Dead Zombie by Dr. Matt"',
+'say "Matt is spreading that zombies ass apart!"',
+'say "Grab them by the BALLS Matt!"',
+'say "MaTt SuCkS aT kIlLiNg - Said no one."',
+'say "Matt makes the Zombies PEE PEE POO POO!"'
+]
 
 # Place holder varibles
 messageOnce15minRestartAlert = True
@@ -50,10 +69,10 @@ while True:
 			tn.write(converToByte + b'\n\n')
 			last_hour = current_hour
 
-		if ("led by CpuMatt" in str(whathappen)):
-			converTeeHee = str(random.choice(teeheematt))
-			convertedTeeHee = bytes(converTeeHee, 'utf-8')
-			tn.write(convertedTeeHee + b'\n\n')
+		#if ("led by CpuMatt" in str(whathappen)):
+		#	converTeeHee = str(random.choice(teeheematt))
+		#	convertedTeeHee = bytes(converTeeHee, 'utf-8')
+		#	tn.write(convertedTeeHee + b'\n\n')
 
 		if ("!rainonme" in str(whathappen)):
 			tn.write(b"weather rain 1\n\n")
