@@ -69,10 +69,10 @@ while True:
 			tn.write(converToByte + b'\n\n')
 			last_hour = current_hour
 
-		#if ("led by CpuMatt" in str(whathappen)):
-		#	converTeeHee = str(random.choice(teeheematt))
-		#	convertedTeeHee = bytes(converTeeHee, 'utf-8')
-		#	tn.write(convertedTeeHee + b'\n\n')
+		if ("led by CpuMatt" in str(whathappen)):
+			converTeeHee = str(random.choice(teeheematt))
+			convertedTeeHee = bytes(converTeeHee, 'utf-8')
+			tn.write(convertedTeeHee + b'\n\n')
 
 		if ("!rainonme" in str(whathappen)):
 			tn.write(b"weather rain 1\n\n")
